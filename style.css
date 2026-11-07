@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --sage: #cddcc6;
+  --card: #e6e3e4;
+  --white: #ffffff;
+  --ink: #1b1b1b;
+  --grey: #6b6b6b;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Raleway", Arial, sans-serif;
+  background: var(--sage);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background: linear-gradient(to right, var(--white) 0 49.2%, var(--sage) 49.2% 100%);
+}
+
+/* თეთრი ჩარჩო ფოტოსთვის */
+.photo-wrap {
+  position: absolute;
+  top: 7.2%;
+  left: 0;
+  width: 61.1%;
+  height: 85%;
+  background: var(--white);
+}
+.photo {
+  position: absolute;
+  left: 23.4%;
+  top: 2.6%;
+  width: 75.4%;
+  height: 95%;
+  background-image: url("photo.png");
+  background-size: auto 114%;
+  background-position: center top;
+  filter: grayscale(1);
+}
+
+
+.card-frame {
+  position: absolute;
+  top: 19.4%;
+  left: 53.6%;
+  width: 26.4%;
+  height: 59%;
+  background: var(--white);
+  padding: 10px;
+}
+.card {
+  height: 100%;
+  min-height: 0;
+  background: var(--card);
+  padding: 7% 8% 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h1 {
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+  font-weight: 400;
+  font-size: clamp(30px, 3.6vw, 52px);
+  line-height: 1.22;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+.card h1 .light {
+  color: var(--grey);
+}
+.card h1 .dark {
+  color: var(--ink);
+}
+
+.cta {
+  margin-top: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 13px;
+  color: #333;
+  text-decoration: none;
+}
+.cta svg {
+  width: 28px;
+  height: 14px;
+  stroke: #333;
+  fill: none;
+  stroke-width: 1.2;
+}
+.cta:hover svg {
+  transform: translateX(4px);
+}
+.cta svg {
+  transition: transform 0.2s;
+}
+.cta:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.social {
+  position: absolute;
+  right: 10px;
+  top: 28%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.social a {
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.chat {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 46px;
+  height: 46px;
+  border-radius: 6px;
+  background: #4b6154;
+  border: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.chat svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
